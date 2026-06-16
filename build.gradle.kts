@@ -20,3 +20,7 @@ dependencies {
 kotlin {
     jvmToolchain(17)
 }
+
+tasks.named<Jar>("jar") {
+    enabled = false
+}
