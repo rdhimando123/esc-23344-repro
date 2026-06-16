@@ -1,0 +1,5 @@
+name: esc-23344-repro
+services:
+  - name: web
+    dockerfile_path: Dockerfile
+    http_port: 8080
