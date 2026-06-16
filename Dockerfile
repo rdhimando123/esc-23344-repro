@@ -4,7 +4,7 @@ ADD --chown=gradle . /app
 
 WORKDIR /app
 
-RUN ./gradlew --no-daemon clean build -x test && rm -rf /root/.kotlin/daemon
+RUN ./gradlew --no-daemon clean build -x test
 
 
 FROM eclipse-temurin:17.0.8_7-jre-jammy
