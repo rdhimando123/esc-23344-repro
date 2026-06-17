@@ -4,8 +4,7 @@ ADD --chown=gradle . /app
 
 WORKDIR /app
 
-# Force Kotlin to run in-process to stop daemon files from being created
-RUN ./gradlew --no-daemon clean build -x test -Dkotlin.compiler.execution.strategy=in-process
+RUN ./gradlew --no-daemon clean build -x test && rm -rf /root/.kotlin/daemon /tmp/*
 
 
 FROM eclipse-temurin:17.0.8_7-jre-jammy
